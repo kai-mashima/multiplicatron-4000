@@ -26,6 +26,10 @@ class ViewManager {
 	renderProduct (product) {
 		document.querySelector('.mult').textContent = product;
 	}
+
+	renderNewFactor () {
+		//create new input space 
+	}
 }
 
 const viewManager = new ViewManager();
