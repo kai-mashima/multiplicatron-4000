@@ -1,0 +1,14 @@
+{
+  "name": "multiplicator4000",
+  "version": "0.1.0",
+  "description": "app showing multiplication of multiple numbers deployed to cloud",
+  "main": "server/server.js",
+  "scripts": {
+    "postinstall": "browserify client/app.js -o client/bundle.js",
+    "start": "node server/server.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "browserify": "^14.3.0"
+  }
+}
