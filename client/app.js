@@ -8,13 +8,16 @@ class ViewManager {
 				'submit', 
 				this.onSubmit.bind(this));
 	}
-	/*
+	
 	newFactorClick() {
 		document.getElementById('newFactor').onclick = function () {
-			document.getElementById("newFactors").innerHTML = "<div> <input id='input-num3' type='text' autocomplete='off' /> </div>";
-			}
+			var newInput = document.createElement('input');
+			newInput.type = text;
+			newInput.autocomplete = off;
+			document.getElementById("newFactors").appendChild(newInput);
+		}
 	}
-	*/
+	
 	
 
 	onSubmit(event) {
