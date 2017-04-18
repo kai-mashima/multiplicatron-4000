@@ -10,7 +10,7 @@ class ViewManager {
 	}
 	
 	newFactorClick() {
-		document.getElementById('newFactor')
+		document.getElementById('form-numbers')
 			.addEventListener(
 				'submit',
 				function() {
