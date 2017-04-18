@@ -14,7 +14,7 @@ class ViewManager {
 			.addEventListener(
 				'submit',
 				function() {
-					createNewFactorInput();
+					this.createNewFactorInput.bind(this);
 				});
 	}
 	
@@ -38,8 +38,9 @@ class ViewManager {
 	}
 
 	
-	createNewFactorInput () {
-		document.getElementById("newFactors").innerHTML = "<div> <input id='input-num3' type='text' autocomplete='off' /> </div>"
+	createNewFactorInput(event) {
+		event.preventDefault();
+		document.getElementById("newFactors").innerHTML = "<div> <input id='input-num3' type='text' autocomplete='off' /> </div>";
 	}
 		
 	/*
