@@ -24,11 +24,11 @@ class ViewManager {
 	
 	onSubmit(event) {
 		event.preventDefault();
-		var numbers = [];
+		var numbers = [0];
 		var inputFields = document.querySelectorAll('input.input-num');
 
 		foreach(input in inputFields) {
-			numbers.push(input.val());
+			numbers.push(input.values());
 		}
 
 		console.log(numbers);
