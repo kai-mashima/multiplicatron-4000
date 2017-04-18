@@ -16,7 +16,7 @@ class ViewManager {
 			var newInput = document.createElement('input');
 			newInput.type = "text";
 			newInput.autocomplete = "off";
-			target.appendChildn(newDiv);
+			target.appendChild(newDiv);
 			newDiv.appendChild(newInput);
 		}
 	}
