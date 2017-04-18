@@ -31,7 +31,7 @@ class ViewManager {
 			numbers.push(input.val());
 		}
 
-		console.log(numbers)
+		console.log(numbers);
 
 		let num1 = document.getElementById('input-num1').value;
 		let num2 = document.getElementById('input-num2').value;
