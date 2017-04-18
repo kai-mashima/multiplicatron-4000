@@ -12,10 +12,12 @@ class ViewManager {
 	newFactorClick() {
 		document.getElementById('newFactor').onclick = function () {
 			var target = document.getElementById("newFactors");
+			var newDiv = document.createElement('div');
 			var newInput = document.createElement('input');
 			newInput.type = "text";
 			newInput.autocomplete = "off";
-			target.appendChild(newInput);
+			target.appendChildn(newDiv);
+			newDiv.appendChild(newInput);
 		}
 	}
 	
