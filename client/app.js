@@ -3,18 +3,18 @@ const multipy = require('./multiplier.js');
 class ViewManager {
 
 	connectEventHandlers() {
-		document.getElementById('form-numbers')
+		document.getElementById('calculate')
 			.addEventListener(
 				'submit', 
 				this.onSubmit.bind(this));
 	}
 	
 	newFactorClick() {
-		document.getElementById('calculate')
+		document.getElementById('newFactor')
 			.addEventListener(
 				'submit',
 				function() {
-					renderNewFactor();
+					createNewFactorInput();
 				});
 	}
 	
@@ -38,8 +38,8 @@ class ViewManager {
 	}
 
 	
-	renderNewFactor () {
-		document.getElementById("newFactors").innerHTML = "<div> <input id='input-num2' type='text' autocomplete='off' /> </div>"
+	createNewFactorInput () {
+		document.getElementById("newFactors").innerHTML = "<div> <input id='input-num3' type='text' autocomplete='off' /> </div>"
 	}
 		
 	/*
