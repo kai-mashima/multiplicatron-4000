@@ -40,7 +40,8 @@ class ViewManager {
 	
 	createNewFactorInput(event) {
 		event.preventDefault();
-		document.getElementById("newFactors").innerHTML = "<div> <input id='input-num3' type='text' autocomplete='off' /> </div>";
+		document.querySelector('#test').textContent = "working";
+		//document.getElementById("newFactors").innerHTML = "<div> <input id='input-num3' type='text' autocomplete='off' /> </div>";
 	}
 		
 	/*
