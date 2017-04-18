@@ -19,6 +19,7 @@ class ViewManager {
 			newInput.autocomplete = "off";
 			target.appendChild(newDiv);
 			newDiv.appendChild(newInput);
+			getInputElements();
 		}
 	}
 	
@@ -67,4 +68,3 @@ class ViewManager {
 const viewManager = new ViewManager();
 viewManager.connectEventHandlers();
 viewManager.newFactorClick();
-viewManager.getInputElements();
