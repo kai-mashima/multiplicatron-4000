@@ -13,9 +13,7 @@ class ViewManager {
 		document.getElementById('form-numbers')
 			.addEventListener(
 				'submit',
-				function() {
-					this.createNewFactorInput.bind(this);
-				});
+				this.createNewFactorInput.bind(this);
 	}
 	
 
