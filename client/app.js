@@ -10,7 +10,7 @@ class ViewManager {
 	}
 	
 	newFactorClick() {
-		document.getElementById('form-numbers')
+		document.getElementById('newFactor')
 			.addEventListener(
 				'submit',
 				this.createNewFactorInput.bind(this));
@@ -38,8 +38,8 @@ class ViewManager {
 	
 	createNewFactorInput(event) {
 		event.preventDefault();
-		document.querySelector('#test').textContent = "working";
-		//document.getElementById("newFactors").innerHTML = "<div> <input id='input-num3' type='text' autocomplete='off' /> </div>";
+		//document.querySelector('#test').textContent = "working";
+		document.getElementById("newFactors").innerHTML = "<div> <input id='input-num3' type='text' autocomplete='off' /> </div>";
 	}
 		
 	/*
