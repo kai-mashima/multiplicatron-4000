@@ -26,8 +26,12 @@ class ViewManager {
 		event.preventDefault();
 		var numbers = [];
 		var inputFields = document.querySelectorAll('input.input-num');
+		for(var i = 0; i < inputFields.length; i++) {
+			var num = inputFields[i].value;
+			numbers.push(num);
+		}
 
-		console.log(inputFields.values());
+		console.log(numbers);
 
 		let num1 = document.getElementById('input-num1').value;
 		let num2 = document.getElementById('input-num2').value;
