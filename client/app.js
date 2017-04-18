@@ -19,7 +19,7 @@ class ViewManager {
 			newInput.autocomplete = "off";
 			target.appendChild(newDiv);
 			newDiv.appendChild(newInput);
-			getInputElements();
+			console.log(document.querySelectorAll("input.input-num"));
 		}
 	}
 	
@@ -47,10 +47,6 @@ class ViewManager {
 		document.getElementById("newFactors").innerHTML = "<div> <input id='input-num" + inputCount + "' type='text' autocomplete='off' /> </div>";
 		inputCount += 1;
 	}
-
-	getInputElements() {
-    	console.log(document.querySelectorAll("input.input-num"));
-	}  
 	
 	/*
 	//https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery
