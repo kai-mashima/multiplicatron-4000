@@ -11,15 +11,14 @@ class ViewManager {
 	
 	newFactorClick() {
 		document.getElementById('newFactor').onclick = function () {
+			var target = document.getElementById("newFactors");
 			var newInput = document.createElement('input');
-			newInput.type = text;
-			newInput.autocomplete = off;
-			document.getElementById("newFactors").appendChild(newInput);
+			newInput.type = "text";
+			newInput.autocomplete = "off";
+			target.appendChild(newInput);
 		}
 	}
 	
-	
-
 	onSubmit(event) {
 		event.preventDefault();
 
