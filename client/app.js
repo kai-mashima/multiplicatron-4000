@@ -19,12 +19,19 @@ class ViewManager {
 			newInput.autocomplete = "off";
 			target.appendChild(newDiv);
 			newDiv.appendChild(newInput);
-			console.log(document.querySelectorAll("input.input-num"));
 		}
 	}
 	
 	onSubmit(event) {
 		event.preventDefault();
+		var numbers = [];
+		var inputFields = document.querySelectorAll('input.input-num');
+
+		foreach(input in inputFields) {
+			numbers.push(input.val());
+		}
+
+		console.log(numbers)
 
 		let num1 = document.getElementById('input-num1').value;
 		let num2 = document.getElementById('input-num2').value;
@@ -41,12 +48,13 @@ class ViewManager {
 		document.querySelector('.mult').textContent = product;
 	}
 
-	
+	/*
 	createNewFactorInput() {
 		var inputCount = 3;
 		document.getElementById("newFactors").innerHTML = "<div> <input id='input-num" + inputCount + "' type='text' autocomplete='off' /> </div>";
 		inputCount += 1;
 	}
+	*/
 	
 	/*
 	//https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery
