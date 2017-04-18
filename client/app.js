@@ -27,7 +27,7 @@ class ViewManager {
 		var numbers = [];
 		var inputFields = document.querySelectorAll('input.input-num');
 
-		console.log(inputFields);
+		console.log(inputFields.values());
 
 		let num1 = document.getElementById('input-num1').value;
 		let num2 = document.getElementById('input-num2').value;
