@@ -8,7 +8,7 @@ class ViewManager {
 				'submit', 
 				this.onSubmit.bind(this));
 	}
-	/*
+	
 	newFactorClick() {
 		document.getElementById('calculate')
 			.addEventListener(
@@ -17,7 +17,7 @@ class ViewManager {
 					renderNewFactor();
 				});
 	}
-	*/
+	
 
 	onSubmit(event) {
 		event.preventDefault();
@@ -37,12 +37,12 @@ class ViewManager {
 		document.querySelector('.mult').textContent = product;
 	}
 
-	/*
+	
 	renderNewFactor () {
 		document.getElementById("newFactors").innerHTML = "<div> <input id='input-num2' type='text' autocomplete='off' /> </div>"
 	}
-	*/
-
+		
+	/*
 	//https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery
 	$(document).ready(function() {
 		var wrapper = $("#newFactors"); //Fields wrapper
@@ -52,6 +52,7 @@ class ViewManager {
 			$(wrapper).append('<div><input type="text" name="mytext[]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
 		});
 	});
+	*/
 }
 
 const viewManager = new ViewManager();
