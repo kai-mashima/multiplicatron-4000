@@ -25,63 +25,29 @@ class ViewManager {
 	onSubmit(event) {
 		//fix linked button functionality 
 		event.preventDefault();
-		var numbers = [];
-		var inputFields = document.querySelectorAll('input.input-num');
+		var numbers = []; //array that holds input values
+		var inputFields = document.querySelectorAll('input.input-num'); //grab all the input fields
 
 		for (var i = 0; i < inputFields.length; i++) {
 			var num = inputFields[i].value;
-			if (num != "") {
-				numbers.push(num);
+			if (num != "") { //if input value is empty do not add it to numbers array
+				numbers.push(num); //add valid form input values to array
 			}
 		}
 
-		console.log(numbers);
+		//console.log(numbers);
 
-		if (numbers.length == 0 || numbers.length == 1) {
-			document.querySelector('.mult').textContent = "NaN";
+		if (numbers.length == 0 || numbers.length == 1) { //if there are none or only one input field filled out return NaN 
+			document.querySelector('.mult').textContent = "NaN"; //change product div to NaN
 		} else {
-			var total = numbers.reduce(function(a,b){return a*b;});
-			this.renderProduct(total);	
+			var total = numbers.reduce(function(a,b){return a*b;}); //add all the values in the input values array
+			this.renderProduct(total);	//call render function to show total
 		}
-
-		//console.log(total);
-
-		//fix render 
-		/*
-		let num1 = document.getElementById('input-num1').value;
-		let num2 = document.getElementById('input-num2').value;
-
-		num1 = parseInt(num1, 10);
-		num2 = parseInt(num2, 10);
-
-		const product = multipy(num1, num2);
-		*/
-		
 	}
 
 	renderProduct(product) {
-		document.querySelector('.mult').textContent = product;
+		document.querySelector('.mult').textContent = product; 
 	}
-
-	/*
-	createNewFactorInput() {
-		var inputCount = 3;
-		document.getElementById("newFactors").innerHTML = "<div> <input id='input-num" + inputCount + "' type='text' autocomplete='off' /> </div>";
-		inputCount += 1;
-	}
-	*/
-	
-	/*
-	//https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery
-	$(document).ready(function() {
-		var wrapper = $("#newFactors"); //Fields wrapper
-		var add_button = $("#newFactor"); //Add button ID
-		$(add_button).click(function(e){ //on add input button click
-			e.preventDefault();
-			$(wrapper).append('<div><input type="text" name="mytext[]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
-		});
-	});
-	*/
 }
 
 const viewManager = new ViewManager();
