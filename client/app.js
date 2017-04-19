@@ -33,7 +33,6 @@ class ViewManager {
 			numbers.push(num);
 		}
 
-		console.log(numbers);
 		var total = numbers.reduce(function(a,b){return a*b;});
 
 		//console.log(total);
@@ -49,6 +48,7 @@ class ViewManager {
 		const product = multipy(num1, num2);
 		*/
 		this.renderProduct(total);
+		console.log(numbers);
 	}
 
 	renderProduct(product) {
