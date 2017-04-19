@@ -35,7 +35,13 @@ class ViewManager {
 			}
 		}
 
-		var total = numbers.reduce(function(a,b){return a*b;});
+		if(numbers == [] || numbers.length == 1) {
+			document.querySelector('.mult').textContent = "NaN";
+		} else {
+			var total = numbers.reduce(function(a,b){return a*b;});
+			this.renderProduct(total);
+			console.log(numbers);
+		}
 
 		//console.log(total);
 
@@ -49,8 +55,7 @@ class ViewManager {
 
 		const product = multipy(num1, num2);
 		*/
-		this.renderProduct(total);
-		console.log(numbers);
+		
 	}
 
 	renderProduct(product) {
