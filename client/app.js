@@ -30,7 +30,9 @@ class ViewManager {
 
 		for (var i = 0; i < inputFields.length; i++) {
 			var num = inputFields[i].value;
-			numbers.push(num);
+			if (num != "") {
+				numbers.push(num);
+			}
 		}
 
 		var total = numbers.reduce(function(a,b){return a*b;});
