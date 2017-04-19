@@ -35,12 +35,13 @@ class ViewManager {
 			}
 		}
 
-		if(numbers == [] || numbers.length == 1) {
+		console.log(numbers);
+
+		if (numbers == [] || numbers.length == 1) {
 			document.querySelector('.mult').textContent = "NaN";
 		} else {
 			var total = numbers.reduce(function(a,b){return a*b;});
-			this.renderProduct(total);
-			console.log(numbers);
+			this.renderProduct(total);	
 		}
 
 		//console.log(total);
