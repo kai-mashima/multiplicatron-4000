@@ -37,7 +37,7 @@ class ViewManager {
 
 		console.log(numbers);
 
-		if (numbers == [] || numbers.length == 1) {
+		if (numbers.length == 0 || numbers.length == 1) {
 			document.querySelector('.mult').textContent = "NaN";
 		} else {
 			var total = numbers.reduce(function(a,b){return a*b;});
