@@ -3,11 +3,10 @@ const multipy = require('./multiplier.js');
 class ViewManager {
 
 	connectEventHandlers() {
-		document.getElementById('calculate')
+		document.getElementById('form-numbers')
 			.addEventListener(
 				'submit', 
 				this.onSubmit.bind(this));
-	
 	}
 	
 	newFactorClick() {
@@ -24,7 +23,6 @@ class ViewManager {
 	}
 	
 	onSubmit(event) {
-
 		//fix linked button functionality 
 		event.preventDefault();
 		var numbers = [];
@@ -37,10 +35,10 @@ class ViewManager {
 
 		var total = numbers.reduce(function(a,b){return a*b;});
 
-		console.log(total);
+		//console.log(total);
 
 		//fix render 
-
+		/*
 		let num1 = document.getElementById('input-num1').value;
 		let num2 = document.getElementById('input-num2').value;
 
@@ -48,8 +46,8 @@ class ViewManager {
 		num2 = parseInt(num2, 10);
 
 		const product = multipy(num1, num2);
-
-		this.renderProduct(product);
+		*/
+		this.renderProduct(total);
 	}
 
 	renderProduct(product) {
