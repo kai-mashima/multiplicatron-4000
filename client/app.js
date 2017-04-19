@@ -28,9 +28,11 @@ class ViewManager {
 		var numbers = [];
 		var inputFields = document.querySelectorAll('input.input-num');
 
-		for(var i = 0; i < inputFields.length; i++) {
+		for (var i = 0; i < inputFields.length; i++) {
 			var num = inputFields[i].value;
-			numbers.push(num);
+			if (Number.isInteger(num)) {
+				numbers.push(num);
+			}
 		}
 
 		var total = numbers.reduce(function(a,b){return a*b;});
