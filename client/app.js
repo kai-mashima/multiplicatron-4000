@@ -3,7 +3,7 @@ const multiply = require('./multiplier.js');
 class ViewManager {
 
 	connectEventHandlers() {
-		document.getElementById('form-numbers')
+		document.getElementById('calculate')
 			.addEventListener(
 				'submit', 
 				this.calculate.bind(this));
