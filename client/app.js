@@ -18,12 +18,14 @@ class ViewManager {
 		document.getElementById('newFactor').onclick = function () {
 			var target = document.getElementById("newFactors"); //get div that will hold new input fields
 			var newDiv = document.createElement('div'); //create new div to put new input field in
+			var br = document.createElement('br');
 			var newInput = document.createElement('input'); //creat new input field
 			newInput.className = "input-num"; //set class of input field
 			newInput.type = "text"; //set type of input field
 			newInput.autocomplete = "off"; //set autocomplete of input field
 			target.appendChild(newDiv); //add new div to new factor div already on the page
 			newDiv.appendChild(newInput); //add new input to newly added div
+			newDiv.appendChild(br);
 		}
 	}
 	
