@@ -37,7 +37,7 @@ class ViewManager {
 
 		for (let i = 0; i < inputFields.length; i++) { //for all inputfields 
 			let num = inputFields[i].value;
-			if (num !== "") { //if input value is empty do not add it to numbers array
+			if (num != "") { //if input value is empty do not add it to numbers array
 				numbers.push(num); //add valid form input values to array
 			}
 		}
