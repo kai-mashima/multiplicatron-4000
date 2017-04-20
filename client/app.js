@@ -3,15 +3,15 @@ const multiply = require('./multiplier.js');
 class ViewManager {
 
 	connectEventHandlers() {
-		document.getElementById('calculateTotal')
-			.addEventListener(
+		let calcButton = document.getElementById('calculateTotal')
+		calcButton.addEventListener(
 				'click', console.log('calc working'));
 				//this.calculate.bind(this));
 
-		document.getElementById('newFactor')
-			.addEventListener(
-				'click', console.log('factor working'));
-				//this.newFactor.bind(this));
+		// document.getElementById('newFactor')
+		// 	.addEventListener(
+		// 		'click', console.log('factor working'));
+		// 		//this.newFactor.bind(this));
 	}
 
 	newFactor(event) {
