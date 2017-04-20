@@ -24,8 +24,9 @@ class ViewManager {
 			newInput.type = "text"; //set type of input field
 			newInput.autocomplete = "off"; //set autocomplete of input field
 			target.appendChild(newDiv); //add new div to new factor div already on the page
+			target.appendChild(br);
 			newDiv.appendChild(newInput); //add new input to newly added div
-			newDiv.appendChild(br);
+
 		}
 	}
 	
