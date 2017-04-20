@@ -5,13 +5,13 @@ class ViewManager {
 	connectEventHandlers() {
 		document.getElementById('calculateTotal')
 			.addEventListener(
-				'click', 
-				this.calculate.bind(this));
+				'click', console.log('calc working'));
+				//this.calculate.bind(this));
 
 		document.getElementById('newFactor')
 			.addEventListener(
-				'click',
-				this.newFactor.bind(this));
+				'click', console.log('factor working'));
+				//this.newFactor.bind(this));
 	}
 
 	newFactor(event) {
