@@ -3,19 +3,18 @@ const multiply = require('./multiplier.js');
 class ViewManager {
 
 	connectEventHandlers() {
-		document.getElementById('calcform')
-			.addEventListener(
+		document.getElementById('calcform') //get the form that the calculate button is in
+			.addEventListener( //listen for submit of calculate button
 				'submit', 
 				this.calculate.bind(this));
 
-		document.getElementById('newfacform')
-			.addEventListener(
+		document.getElementById('newfacform') //get the form that the new factor button is in
+			.addEventListener(//listen for submit of new factor button
 				'submit', 
 				this.newFactor.bind(this));
 	}
 
 	newFactor(event) {
-		console.log('new factor running')
 		event.preventDefault();
 		let target = document.getElementById('newFactors'); //get div that will hold new input fields
 		const newDiv = document.createElement('div'); //create new div to put new input field in
@@ -30,7 +29,6 @@ class ViewManager {
 	}
 	
 	calculate(event) {
-		console.log('calculate running')
 		event.preventDefault();
 		let numbers = []; //array that holds input values
 		let inputFields = document.querySelectorAll('input.input-num'); //grab all the input fields
