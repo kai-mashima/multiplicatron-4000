@@ -3,14 +3,14 @@ const multiply = require('./multiplier.js');
 class ViewManager {
 
 	connectEventHandlers() {
-		document.getElementById('calculateTotal')
+		document.getElementById('calcform')
 			.addEventListener(
-				'click', console.log('calc working'));
+				'submit', console.log('calc working'));
 				//this.calculate.bind(this));
 
-		document.getElementById('newFactor')
+		document.getElementById('newfacform')
 			.addEventListener(
-				'click', console.log('factor working'));
+				'submit', console.log('factor working'));
 				//this.newFactor.bind(this));
 	}
 
@@ -57,7 +57,6 @@ class ViewManager {
 
 const viewManager = new ViewManager();
 viewManager.connectEventHandlers();
-console.log("app.js is working");
 
 	// newFactorClick() {
 	// 	document.getElementById('newFactor').onclick = function () {
