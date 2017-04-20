@@ -1,5 +1,5 @@
-const multiply = function (num1, num2) {
-	return num1 * num2;
+const multiply = function (arr) {
+	return arr.reduce(function(a,b){return a*b;});
 };
 
 module.exports = multiply;
