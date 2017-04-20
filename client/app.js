@@ -5,13 +5,13 @@ class ViewManager {
 	connectEventHandlers() {
 		document.getElementById('calcform')
 			.addEventListener(
-				'submit', console.log('calc working'));
-				//this.calculate.bind(this));
+				'submit', 
+				this.calculate.bind(this));
 
 		document.getElementById('newfacform')
 			.addEventListener(
-				'submit', console.log('factor working'));
-				//this.newFactor.bind(this));
+				'submit', 
+				this.newFactor.bind(this));
 	}
 
 	newFactor(event) {
