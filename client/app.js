@@ -3,7 +3,7 @@ const multiply = require('./multiplier.js');
 class ViewManager {
 
 	connectEventHandlers() {
-		document.getElementById('calculate')
+		document.getElementById('calculateTotal')
 			.addEventListener(
 				'submit', 
 				this.calculate.bind(this));
@@ -37,12 +37,12 @@ class ViewManager {
 
 		for (let i = 0; i < inputFields.length; i++) { //for all inputfields 
 			let num = inputFields[i].value;
-			if (num != "") { //if input value is empty do not add it to numbers array
+			if (num !== "") { //if input value is empty do not add it to numbers array
 				numbers.push(num); //add valid form input values to array
 			}
 		}
 
-		if (numbers.length == 0 || numbers.length == 1) { //if there are none or only one input field filled out return NaN 
+		if (numbers.length === 0 || numbers.length === 1) { //if there are none or only one input field filled out return NaN 
 			document.querySelector('.mult').textContent = "NaN"; //change product div to NaN
 		} else {
 			let total = multiply(numbers); //multiply all the values in the input values array
