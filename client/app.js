@@ -1,4 +1,4 @@
-const multipy = require('./multiplier.js');
+const multiply = require('./multiplier.js');
 
 class ViewManager {
 
