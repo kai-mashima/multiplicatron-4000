@@ -5,12 +5,12 @@ class ViewManager {
 	connectEventHandlers() {
 		document.getElementById('calculateTotal')
 			.addEventListener(
-				'submit', 
+				'click', 
 				this.calculate.bind(this));
 
 		document.getElementById('newFactor')
 			.addEventListener(
-				'submit',
+				'click',
 				this.newFactor.bind(this));
 	}
 
