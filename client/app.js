@@ -15,6 +15,7 @@ class ViewManager {
 	}
 
 	newFactor(event) {
+		console.log("new factor running")
 		event.preventDefault();
 		let target = document.getElementById("newFactors"); //get div that will hold new input fields
 		const newDiv = document.createElement('div'); //create new div to put new input field in
@@ -28,22 +29,8 @@ class ViewManager {
 		newDiv.appendChild(newInput); //add new input to newly added div
 	}
 	
-	// newFactorClick() {
-	// 	document.getElementById('newFactor').onclick = function () {
-	// 		let target = document.getElementById("newFactors"); //get div that will hold new input fields
-	// 		const newDiv = document.createElement('div'); //create new div to put new input field in
-	// 		const br = document.createElement('br');
-	// 		const newInput = document.createElement('input'); //creat new input field
-	// 		newInput.className = "input-num"; //set class of input field
-	// 		newInput.type = "text"; //set type of input field
-	// 		newInput.autocomplete = "off"; //set autocomplete of input field
-	// 		target.appendChild(newDiv); //add new div to new factor div already on the page
-	// 		target.appendChild(br);
-	// 		newDiv.appendChild(newInput); //add new input to newly added div
-	// 	}
-	// }
-	
 	calculate(event) {
+		console.log("calculate running")
 		event.preventDefault();
 		let numbers = []; //array that holds input values
 		let inputFields = document.querySelectorAll('input.input-num'); //grab all the input fields
@@ -70,4 +57,20 @@ class ViewManager {
 
 const viewManager = new ViewManager();
 viewManager.connectEventHandlers();
+
+	// newFactorClick() {
+	// 	document.getElementById('newFactor').onclick = function () {
+	// 		let target = document.getElementById("newFactors"); //get div that will hold new input fields
+	// 		const newDiv = document.createElement('div'); //create new div to put new input field in
+	// 		const br = document.createElement('br');
+	// 		const newInput = document.createElement('input'); //creat new input field
+	// 		newInput.className = "input-num"; //set class of input field
+	// 		newInput.type = "text"; //set type of input field
+	// 		newInput.autocomplete = "off"; //set autocomplete of input field
+	// 		target.appendChild(newDiv); //add new div to new factor div already on the page
+	// 		target.appendChild(br);
+	// 		newDiv.appendChild(newInput); //add new input to newly added div
+	// 	}
+	// }
+
 // viewManager.newFactorClick();
